@@ -1,0 +1,61 @@
+<div class="jumbotron py-3">
+    <h1 class="display-4 text-center">Property Migration from Remote API to SQL Server</h1>
+</div>
+<br/>
+<div class="row">
+    <span><b>List of Properties from Remote API</b></span>
+    <app-property-old-form></app-property-old-form>
+</div>
+<br/>
+<div class="row">
+    <span><b>List of Properties migrated to SQL Server</b></span>
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th>Id</th>
+                    <th>Address 1</th>
+                    <th>Address 2</th>
+                    <th>City</th>
+                    <th>Country</th>
+                    <th>County</th>
+                    <th>District</th>
+                    <th>State</th>
+                    <th>Zip</th>
+                    <th>Zip+4</th>
+                    <th>Year Built</th>
+                    <th>List Price</th>
+                    <th>Monthly Rent</th>
+                    <th>Gross Yield</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pd of service.list">
+                    <td (click)="populateForm(pd)">{{pd.id}}</td>
+                    <td (click)="populateForm(pd)">{{pd.address1}}</td>
+                    <td (click)="populateForm(pd)">{{pd.address2}}</td>
+                    <td (click)="populateForm(pd)">{{pd.city}}</td>
+                    <td (click)="populateForm(pd)">{{pd.country}}</td>
+                    <td (click)="populateForm(pd)">{{pd.county}}</td>
+                    <td (click)="populateForm(pd)">{{pd.district}}</td>
+                    <td (click)="populateForm(pd)">{{pd.state}}</td>
+                    <td (click)="populateForm(pd)">{{pd.zip}}</td>
+                    <td (click)="populateForm(pd)">{{pd.zipPlus4}}</td>
+                    <td (click)="populateForm(pd)">{{pd.yearBuilt}}</td>
+                    <td (click)="populateForm(pd)">{{pd.listPrice  | currency:'USD':true:'1.2-2'}}</td>
+                    <td (click)="populateForm(pd)">{{pd.monthlyRent  | currency:'USD':true:'1.2-2'}}</td>
+                    <td (click)="populateForm(pd)">{{pd.grossYield | percent}}</td>
+                    <td>
+                        <i class="far fa-trash-alt fa-lg text-danger" (click)="onDelete(pd.id)"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</div>
+<br/>
+<div class="row">
+    
+        <span><b>Edition of Migrated Record</b></span>
+        <app-property-detail-form></app-property-detail-form>
+    
+</div>

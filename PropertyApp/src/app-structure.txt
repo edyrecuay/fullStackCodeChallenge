@@ -1,0 +1,18 @@
+● src
++---● app
+|   +--● property-details
+|   |  |--property-details.component.ts|.html
+|   |  |
+|   |  +--● property-detail-form
+|   |     |--property-detail-form.component.ts|.html
+|   |  +--● property-old-form
+|   |     |--property-old-form.component.ts|.html
+|   |
+|   +--● shared
+|   |  |--property-detail.service.ts
+|   |  |--property-detail.model.ts
+|   |  |--property-old-detail.model.ts
+|   |
+|   |--app.module.ts
+|
+|--index.html (cdn path for bootstrap & fa icons)

@@ -1,0 +1,87 @@
+<form novalidate autocomplete="off" #form="ngForm" (submit)="onSubmit(form)">
+    <input type="hidden" name="id"
+    [value]="service.formData.id" />
+    <div class="form-group">
+        <label>Address 1</label>
+        <input class="form-control form-control-lg" placeholder="Address 1"
+        name="address1" #address1="ngModel" [(ngModel)]="service.formData.address1" required>
+    </div>
+    <div class="form-group">
+        <label>Address 2</label>
+        <input class="form-control form-control-lg" placeholder="Address 2"
+        name="address2" #address2="ngModel" [(ngModel)]="service.formData.address2" >
+    </div>
+    <div clas="form-row">
+        <div class="form-group col-md-6">
+            <label>City</label>
+            <input class="form-control form-control-lg" placeholder="City Name"
+            name="city" #city="ngModel" [(ngModel)]="service.formData.city" required>
+        </div> 
+        <div class="form-group col-md-6">
+            <label>Country</label>
+            <input class="form-control form-control-lg" placeholder="Country Name"
+            name="country" #country="ngModel" [(ngModel)]="service.formData.country" required>
+        </div>
+    </div>
+    <div clas="form-row">
+        <div class="form-group col-md-6">
+            <label>County</label>
+            <input class="form-control form-control-lg" placeholder="County Name"
+            name="county" #county="ngModel" [(ngModel)]="service.formData.county" >
+        </div>
+        <div class="form-group col-md-6">
+            <label>District</label>
+            <input class="form-control form-control-lg" placeholder="District Name"
+            name="district" #district="ngModel" [(ngModel)]="service.formData.district" >
+        </div>
+    </div>
+    <div class="form-group">
+        <label>State</label>
+        <input class="form-control form-control-lg" placeholder="State code"
+        name="state" #state="ngModel" [(ngModel)]="service.formData.state" required maxlength="2" minlength="2"
+        [class.invalid]="state.invalid && state.touched">
+    </div>
+    <div clas="form-row">
+        <div class="form-group col-md-6">
+            <label>Zip Code</label>
+            <input class="form-control form-control-lg" placeholder="Zip code"
+            name="zip" #zip="ngModel" [(ngModel)]="service.formData.zip" required maxlength="5" minlength="5"
+            [class.invalid]="zip.invalid && zip.touched">
+        </div>
+        <div class="form-group col-md-6">
+            <label>ZipPlus4 Code</label>
+            <input class="form-control form-control-lg" placeholder="ZipPlus4 code"
+            name="zipPlus4" #zipPlus4="ngModel" [(ngModel)]="service.formData.zipPlus4" maxlength="4" minlength="4"
+            [class.invalid]="zipPlus4.invalid && zipPlus4.touched">
+        </div>
+    </div>
+    <div clas="form-row">
+        <div class="form-group col-md-6">
+            <label>Year Built</label>
+            <input class="form-control form-control-lg" placeholder="Year Built"
+            name="yearBuilt" #yearBuilt="ngModel" [(ngModel)]="service.formData.yearBuilt" required maxlength="4" minlength="4"
+            [class.invalid]="yearBuilt.invalid && yearBuilt.touched">
+        </div> 
+        <div class="form-group col-md-6">
+            <label>List Price</label>
+            <input class="form-control form-control-lg" placeholder="List Price"
+            name="listPrice" #listPrice="ngModel" [(ngModel)]="service.formData.listPrice" required>
+        </div>
+    </div>
+    <div clas="form-row">
+        <div class="form-group col-md-6">
+            <label>Monthly Rent</label>
+            <input class="form-control form-control-lg" placeholder="Monthly Rent"
+            name="monthlyRent" #monthlyRent="ngModel" [(ngModel)]="service.formData.monthlyRent" >
+        </div> 
+        <div class="form-group col-md-6">
+            <label>Gross Yield</label>
+            <input class="form-control form-control-lg" placeholder="Gross Yield"
+            name="grossYield" #grossYield="ngModel" [(ngModel)]="service.formData.grossYield" >
+        </div>
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-info btn-lg btn-block" type="submit" [disabled]="form.invalid">SUBMIT</button>
+    </div>
+</form>

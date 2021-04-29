@@ -1,0 +1,46 @@
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th>Id</th>
+            <th>Address 1</th>
+            <th>Address 2</th>
+            <th>City</th>
+            <th>Country</th>
+            <th>County</th>
+            <th>District</th>
+            <th>State</th>
+            <th>Zip</th>
+            <th>Zip4</th>
+
+            <th>Year Built</th>
+            <th>List Price</th>
+            <th>Monthly Rent</th>
+            <th>Gross Yield</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pd of service.remotelist">
+            <td >{{pd.id}}</td>
+            <td >{{pd.address && pd.address.address1}}</td>
+            <td >{{pd.address && pd.address.address2}}</td>
+            <td >{{pd.address && pd.address.city}}</td>
+            <td >{{pd.address && pd.address.country}}</td>
+            <td >{{pd.address && pd.address.county}}</td>
+            <td >{{pd.address && pd.address.district}}</td>
+            <td >{{pd.address && pd.address.state}}</td>
+            <td >{{pd.address && pd.address.zip}}</td>
+            <td >{{pd.address && pd.address.zipPlus4}}</td>
+           
+            <td >{{pd.physical && pd.physical.yearBuilt}}</td>
+
+            <td >{{pd.financial && pd.financial.listPrice | currency:'USD':true:'1.2-2'}}</td>
+            <td >{{pd.financial && pd.financial.monthlyRent | currency:'USD':true:'1.2-2'}}</td>
+            
+            <td >{{pd.financial && (pd.financial.monthlyRent * 12)/pd.financial.listPrice |  percent }}</td>
+            <td>
+                <i class="far fa-save fa-lg text-primary" (click)="onSave(pd)"></i>
+            </td>
+        </tr>
+    </tbody>
+</table>
