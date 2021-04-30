@@ -56,18 +56,18 @@ Web Application based on Angular version 11.2.10
 ```bash
 ● src
 +---● app
-|   +--● property-details
-|   |  |--property-details.component.ts|.html
+|   +--● property-details 
+|   |  |--property-details.component.ts|.html -> Main form that contains all the components
 |   |  |
-|   |  +--● property-detail-form
-|   |     |--property-detail-form.component.ts|.html
-|   |  +--● property-old-form
+|   |  +--● property-old-form -> Component and HTML that consume the remote API and list it in a table
 |   |     |--property-old-form.component.ts|.html
+|   |  +--● property-detail-form -> Component and HTML to List and Edit the Migrated Properties in SQL Server
+|   |     |--property-detail-form.component.ts|.html
 |   |
-|   +--● shared
-|   |  |--property-detail.service.ts
-|   |  |--property-detail.model.ts
-|   |  |--property-old-detail.model.ts
+|   +--● shared -> Services and Models
+|   |  |--property-old-detail.model.ts -> Model that represents the json structure of the Remote API
+|   |  |--property-detail.model.ts -> Model that represents the new table in SQL Server
+|   |  |--property-detail.service.ts -> Retrieve information from the Remote API and executes POST, GET, DELETE, PUT of the API to record properties in SQL Server
 |   |
 |   |--app.module.ts
 |
