@@ -6,7 +6,9 @@ This code challenge has two parts:
 ## 1-  /PropertyProjectAPI
 
 ASP.NET Core  with Net. 5 which contains the REST API based withe Entity Framework (Code First) to INSERT/UPDATE/GETOne/GetALL records of the table [dbo].[Properties]
-API Address: http://localhost:52565/api/PropertyDetail.
+API Address: 
+
+http://localhost:52565/api/PropertyDetail.
 
 ## Installation
 
@@ -14,7 +16,10 @@ After cloning/downloading and compiling the solution: PropertyProjectAPI.sln
 
 You can edit the DB connection in \PropertyProjectAPI\PropertyProjectAPI\appsettings.json:
 
-Connection String: "DevConnection": "Server=localhost;Database=PropertyDetailDB;Trusted_Connection=True;MultipleActiveResultSets=true"
+Connection String: 
+```bash
+"DevConnection": "Server=localhost;Database=PropertyDetailDB;Trusted_Connection=True;MultipleActiveResultSets=true"
+```
 
 Executute the migration files to create the database PropertyDetailDB and table [dbo].[Properties] in SQL Server:
 
@@ -61,7 +66,8 @@ http://localhost:4200/
 ## Usage
 
 The page will show a table with the properties list from https://samplerspubcontent.blob.core.windows.net/public/properties.json
-Each row has a button at the end to "import"  the record   and save it in the SQL Database.
+
+each row has a button at the end to "import"  the record   and save it in the SQL Database.
 
 Bellow that there is a table that reflects the already migrated records stored in the SQL database. If we select one of these records it is possible to update or delete it and import it again.
 
