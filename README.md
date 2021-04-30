@@ -1,5 +1,18 @@
 # Full Stack Code Challenge
 
+
+## Prerequisites
+
+Software:
+
+- Visual Studio .NET / Visual Studio Code, Node.js 14.15, SQL Server (with Management Studio 18).
+
+
+## Introduction
+
+
+The demo emulates a page to migrate property records from a remote API to a database in SQL Server. The user choose which record to import, it will reflect graphically in the UI.
+
 This code challenge has two parts:
 
 
