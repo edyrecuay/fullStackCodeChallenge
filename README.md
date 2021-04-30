@@ -51,6 +51,28 @@ http://localhost:52565/api/PropertyDetail
 
 Web Application based on Angular version 11.2.10
 
+## App Structure
+
+● src
++---● app
+|   +--● property-details
+|   |  |--property-details.component.ts|.html
+|   |  |
+|   |  +--● property-detail-form
+|   |     |--property-detail-form.component.ts|.html
+|   |  +--● property-old-form
+|   |     |--property-old-form.component.ts|.html
+|   |
+|   +--● shared
+|   |  |--property-detail.service.ts
+|   |  |--property-detail.model.ts
+|   |  |--property-old-detail.model.ts
+|   |
+|   |--app.module.ts
+|
+|--index.html (cdn path for bootstrap & fa icons)
+
+
 ## Installation
 
 After cloning/dowloading the repo you need to install the node modules with:
