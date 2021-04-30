@@ -3,7 +3,7 @@
 This code challenge has two parts:
 
 
-1-  /PropertyProjectAPI
+##1-  /PropertyProjectAPI
 
 ASP.NET Core  with Net. 5 which contains the REST API based withe Entity Framework (Code First) to INSERT/UPDATE/GETOne/GetALL records of the table [dbo].[Properties]
 API Address: http://localhost:52565/api/PropertyDetail.
@@ -29,7 +29,7 @@ Run the project and it will show a Swagger page in:
 http://localhost:52565/api/PropertyDetail
  
 
-1-  /PropertyApp
+##2-  /PropertyApp
 
 Web Application based on Angular version 11.2.10
 
