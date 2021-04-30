@@ -53,6 +53,7 @@ Web Application based on Angular version 11.2.10
 
 ## App Structure
 
+```bash
 ● src
 +---● app
 |   +--● property-details
@@ -71,6 +72,7 @@ Web Application based on Angular version 11.2.10
 |   |--app.module.ts
 |
 |--index.html (cdn path for bootstrap & fa icons)
+```
 
 
 ## Installation
