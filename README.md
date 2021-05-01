@@ -34,7 +34,7 @@ Connection String:
 "DevConnection": "Server=localhost;Database=PropertyDetailDB;Trusted_Connection=True;MultipleActiveResultSets=true"
 ```
 
-Executute the migration files to create the database PropertyDetailDB and table [dbo].[Properties] in SQL Server:
+Execute the migration files to create the database PropertyDetailDB and table [dbo].[Properties] in SQL Server:
 
 ```bash
 Package Manager Console
@@ -77,7 +77,7 @@ Web Application based on Angular version 11.2.10
 
 ## Installation
 
-After cloning/dowloading the repo you need to install the node modules with:
+After cloning/downloading the repo you need to install the node modules with:
 
 ```bash
 npm i
